@@ -1,0 +1,13 @@
+Function List for microcontrollers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->Calibration
+	-int readGage(int gageNumber); //function takes int value and returns the value of the gage (0-1023) (analogRead)
+	-void storeInEEPROM(int value, hexidecimal memory location); //stores value in EEPROM memory location, returns nothing
+	-void sensorCalFinished(int led); //takes int led number, turns the led state to high, returns nothing
+
+-->Data Acquisition
+	-void resetLEDs(int led1, int led2, ...); //turns all LEDs off, takes led pin numbers
+	-int getTimeStamp(int offset); //subtracts offset from microseconds, used to sync all the boards together
+	-void formatEntry(int value, int time); //converts sensor reading and timestamp to string, formats with commas seperating
+	-void saveData(string entry, "file path"); //opens/closes file stream, creates file if dones't exist, takes care of naming files
+	-void resetFileName(); //resets EEPROM value responsible for sequentially naming files

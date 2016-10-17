@@ -34,6 +34,6 @@ String Gage::formatEntry(int value, int time)
 	String time_str;
 	value_str = String(value); //set equals parameter
 	time_str = String(time); //hopefully String class will automatically take care of the casting
-	String fin = " " + value_str + ", " + time_str;
+	String fin = " " + value_str + ", " + time_str + ",";
 }
 

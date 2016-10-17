@@ -22,7 +22,8 @@ Gage::Gage(int GageNumber)
 **/
 int Gage::readGage(int GageNumber)
 {
-	analogRead(GageNumber);
+	return analogRead(GageNumber);
+	
 }
 
 //formats entry in order to store in the data file
@@ -35,5 +36,6 @@ String Gage::formatEntry(int value, int time)
 	value_str = String(value); //set equals parameter
 	time_str = String(time); //hopefully String class will automatically take care of the casting
 	String fin = " " + value_str + ", " + time_str + ",";
+	return fin;
 }
 
